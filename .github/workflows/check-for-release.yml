@@ -1,5 +1,7 @@
 name: Check for new release
 on:
+  schedule:
+    - cron: '20 4 * * *'
   workflow_dispatch:
 jobs:
   check:
@@ -37,7 +39,7 @@ jobs:
             See https://github.com/edomora97/task-maker-rust/releases/tag/${{ steps.getrelease.outputs.release }}
 
             Merge this PR to build & publish the new version
-          labels: newrelease
+          labels: new-release
 
       - name: Show PR info
         if: ${{ steps.cpr.outputs.pull-request-number }}
