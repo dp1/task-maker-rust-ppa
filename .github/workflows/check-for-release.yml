@@ -19,9 +19,8 @@ jobs:
         id: checkver
         run: |
           UPSTREAM_VERSION=${{ steps.getrelease.outputs.release }}
-          echo "UPSTREAM_VERSION=${UPSTREAM_VERSION:1}" >> $GITHUB_ENV
           chmod +x ./check-for-release.sh
-          ./check-for-release.sh
+          UPSTREAM_VERSION=${UPSTREAM_VERSION:1} ./check-for-release.sh
 
       - name: Create PR
         id: cpr
