@@ -1,7 +1,7 @@
 name: Check for new release
 on:
   schedule:
-    - cron: '20 4 * * *'
+    - cron: '20 4,19 * * *'
   workflow_dispatch:
 jobs:
   check:
