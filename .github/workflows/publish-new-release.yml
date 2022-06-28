@@ -22,5 +22,5 @@ jobs:
         env:
           GPG_PRIVATE_KEY: ${{ secrets.PPA_GPG_PRIVATE_KEY }}
           GPG_PASSPHRASE: ${{ secrets.PPA_GPG_PASSPHRASE }}
-          PKGDIR: ${{ GITHUB_WORKSPACE }}/build/task-maker-rust
+          PKGDIR: ${{ github.workspace }}/build/task-maker-rust
           REPOSITORY: ppa:dariop1/task-maker-rust
