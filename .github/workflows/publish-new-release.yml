@@ -1,0 +1,26 @@
+name: Publish new release
+on:
+  workflow_dispatch:
+jobs:
+  publish:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+
+      - name: Prepare package
+        run: |
+           chmod +x ./prepare-build.sh
+           ./prepare-build.sh
+        shell: bash
+
+      - name: Build and publish
+        run: |
+           chmod +x ./build.sh
+           ./build.sh
+        shell: bash
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.PPA_GPG_PRIVATE_KEY }}
+          GPG_PASSPHRASE: ${{ secrets.PPA_GPG_PASSPHRASE }}
+          PKGDIR: ${{ GITHUB_WORKSPACE }}/build/task-maker-rust
+          REPOSITORY: ppa:dariop1/task-maker-rust
