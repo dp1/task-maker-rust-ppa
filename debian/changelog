@@ -1,4 +1,4 @@
-task-maker-rust (0.5.0-1~ubuntu#VERSION_NUM) #VERSION_NAME; urgency=medium
+task-maker-rust (0.5.1-1~ubuntu#VERSION_NUM) #VERSION_NAME; urgency=medium
 
   * Initial release
 
