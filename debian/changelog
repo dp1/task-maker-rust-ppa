@@ -1,0 +1,5 @@
+task-maker-rust (0.5.6-1) focal; urgency=medium
+
+  * Initial release
+
+ -- Dario Petrillo <dario.pk1@gmail.com>  Sun, 26 Jun 2022 23:08:54 +0200
