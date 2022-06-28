@@ -1,0 +1,48 @@
+name: Check for new release
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+
+      - name: Get latest tmr release
+        id: getrelease
+        uses: pozetroninc/github-action-get-latest-release@v0.5.0
+        with:
+          repository: edomora97/task-maker-rust
+          excludes: prerelease, draft
+
+      - name: Check if the version is new
+        id: checkver
+        run: |
+          UPSTREAM_VERSION=${{ steps.getrelease.outputs.release }}
+          echo "UPSTREAM_VERSION=${UPSTREAM_VERSION:1}" >> $GITHUB_ENV
+          chmod +x ./check-for-release.sh
+          ./check-for-release.sh
+
+      - name: Create PR
+        id: cpr
+        if: steps.checkver.outputs.createpr == 'yes'
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: Update task-maker-rust to ${{ steps.getrelease.outputs.release }}
+          branch: update-${{ steps.getrelease.outputs.release }}
+          delete-branch: true
+          title: Update task-maker-rust to ${{ steps.getrelease.outputs.release }}
+          body: |
+            Update task-maker-rust to ${{ steps.getrelease.outputs.release }}.
+
+            See https://github.com/edomora97/task-maker-rust/releases/tag/${{ steps.getrelease.outputs.release }}
+
+            Merge this PR to build & publish the new version
+          labels: newrelease
+
+      - name: Show PR info
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          echo "Pull Request Operation - ${{ steps.cpr.outputs.pull-request-operation }}"
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
