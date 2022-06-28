@@ -9,7 +9,7 @@ set -e
 # add_changelog_entry 0.5.6
 add_changelog_entry() {
     tmpfile=`mktemp`
-    echo "task-maker-rust ($1-1) focal; urgency=medium" >>$tmpfile
+    echo "task-maker-rust ($1-1~ubuntu#VERSION_NUM) #VERSION_NAME; urgency=medium" >>$tmpfile
     echo "" >>$tmpfile
     echo "  * Update to version $1" >>$tmpfile
     echo "" >>$tmpfile
