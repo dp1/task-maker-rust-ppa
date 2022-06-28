@@ -1,4 +1,4 @@
-task-maker-rust (0.5.6-1) focal; urgency=medium
+task-maker-rust (0.5.0-1) focal; urgency=medium
 
   * Initial release
 
