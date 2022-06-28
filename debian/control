@@ -8,7 +8,7 @@ Homepage: https://github.com/edomora97/task-maker-rust
 
 Package: task-maker-rust
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, libseccomp2 (>= 0.0.0~20120605), libgcc1 (>= 1:4.2), libc6 (>= 2.18), libseccomp2 (>= 1.0.1)
 Description: task-maker-rust package
  Tool for building tasks for informatics competitions, with support for
  cache, distributed computations and more
