@@ -1,0 +1,15 @@
+#!/usr/bin/dh-exec
+target/release/task-maker => usr/bin/task-maker-rust
+target/release/task-maker-tools usr/bin/
+
+target/autocompletion/task-maker-rust.bash => etc/bash_completion.d/task-maker-rust
+target/autocompletion/_task-maker-rust => usr/share/zsh/vendor-completions/_task-maker-rust
+target/autocompletion/task-maker-rust.fish => usr/share/fish/completions/task-maker-rust.fish
+target/autocompletion/task-maker-tools.bash => etc/bash_completion.d/task-maker-tools
+target/autocompletion/_task-maker-tools => usr/share/zsh/vendor-completions/_task-maker-tools
+target/autocompletion/task-maker-tools.fish => usr/share/fish/completions/task-maker-tools.fish
+
+data/* usr/share/task-maker-rust/
+
+tools/vim/ftdetect/cases_gen.vim usr/share/vim/vimfiles/ftdetect/
+tools/vim/syntax/cases_gen.vim usr/share/vim/vimfiles/syntax/

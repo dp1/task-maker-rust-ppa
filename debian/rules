@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	mkdir -p .cargo
+	cp debian/cargo.config .cargo/config
+	tar xJf debian/vendor.tar.xz
+	cargo build --release --frozen
+	target/release/task-maker-tools gen-autocompletion
+
+override_dh_auto_clean:
+	cargo clean
+	rm -rf .cargo vendor
