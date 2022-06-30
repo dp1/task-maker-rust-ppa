@@ -1,3 +1,9 @@
+task-maker-rust (0.5.6-2~ubuntu#VERSION_NUM) #VERSION_NAME; urgency=medium
+
+  * bugfix: Set TM_DATA_DIR when building task-maker-rust
+
+ -- Dario Petrillo <dario.pk1@gmail.com>  Thu, 30 Jun 2022 12:49:58 +0000
+
 task-maker-rust (0.5.6-1~ubuntu#VERSION_NUM) #VERSION_NAME; urgency=medium
 
   * Update to version 0.5.6
