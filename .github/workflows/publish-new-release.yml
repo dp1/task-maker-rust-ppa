@@ -13,7 +13,7 @@ jobs:
         github.event.pull_request.merged == true &&
         contains( github.event.pull_request.labels.*.name, 'new-release')
       )
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v3
