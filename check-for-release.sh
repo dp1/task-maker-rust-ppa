@@ -29,8 +29,8 @@ else
     if dpkg --compare-versions "$CUR_RELEASE" lt "$UPSTREAM_VERSION"; then
         echo Updating changelog
         add_changelog_entry $UPSTREAM_VERSION
-        echo "::set-output name=createpr::yes"
+        echo "createpr=yes" >> $GITHUB_OUTPUT
     else
-        echo "::set-output name=createpr::no"
+        echo "createpr=no" >> $GITHUB_OUTPUT
     fi
 fi
