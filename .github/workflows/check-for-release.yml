@@ -3,6 +3,7 @@ on:
   schedule:
     - cron: '20 4 * * *'
   workflow_dispatch:
+  repository_dispatch:
 jobs:
   check:
     runs-on: ubuntu-latest
