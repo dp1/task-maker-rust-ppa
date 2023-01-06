@@ -2,7 +2,7 @@ Source: task-maker-rust
 Section: utils
 Priority: optional
 Maintainer: Dario Petrillo <dario.pk1@gmail.com>
-Build-Depends: debhelper-compat (= 12), dh-exec, cargo, libseccomp-dev
+Build-Depends: debhelper-compat (= 11), dh-exec, cargo, libseccomp-dev
 Standards-Version: 4.4.1
 Homepage: https://github.com/edomora97/task-maker-rust
 
