@@ -1,3 +1,15 @@
+task-maker-rust (0.5.9-3~ubuntu#VERSION_NUM) #VERSION_NAME; urgency=medium
+
+  * Fixing Ubuntu 18.04 and others
+
+ -- Dario Petrillo <dario.pk1@gmail.com>  Fri, 06 Jan 2023 19:47:00 +0000
+
+task-maker-rust (0.5.9-2~ubuntu#VERSION_NUM) #VERSION_NAME; urgency=medium
+
+  * Fixing Ubuntu 18.04
+
+ -- Dario Petrillo <dario.pk1@gmail.com>  Fri, 06 Jan 2023 19:19:23 +0000
+
 task-maker-rust (0.5.9-1~ubuntu#VERSION_NUM) #VERSION_NAME; urgency=medium
 
   * Update to version 0.5.9

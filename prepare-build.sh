@@ -13,12 +13,12 @@ cd build
 
 # Prepare the directory structure
 # To build the package, we need:
-#  - the orig.tar.xz source tarball
+#  - the orig.tar.gz source tarball
 #  - the debian/ folder inside the source repo
 #  - the packaged dependencies
 
 git clone --depth 1 --branch v$TAG https://github.com/edomora97/task-maker-rust
-tar -cJf task-maker-rust_$TAG.orig.tar.xz task-maker-rust
+wget https://github.com/edomora97/task-maker-rust/archive/refs/tags/v$TAG.tar.gz -O task-maker-rust_$TAG.orig.tar.gz
 cd task-maker-rust
 cp -r ../../debian .
 
