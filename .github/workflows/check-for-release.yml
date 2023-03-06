@@ -13,7 +13,7 @@ jobs:
 
       - name: Get latest tmr release
         id: getrelease
-        uses: dp1/github-action-get-latest-release@0.6.1
+        uses: pozetroninc/github-action-get-latest-release@v0.7.0
         with:
           repository: edomora97/task-maker-rust
           excludes: prerelease, draft
