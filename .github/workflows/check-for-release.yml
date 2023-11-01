@@ -28,7 +28,7 @@ jobs:
       - name: Create PR
         id: cpr
         if: steps.checkver.outputs.createpr == 'yes'
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v5
         with:
           commit-message: Update task-maker-rust to ${{ steps.getrelease.outputs.release }}
           branch: update-${{ steps.getrelease.outputs.release }}
