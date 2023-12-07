@@ -3,7 +3,7 @@
 
 set -o errexit -o pipefail -o nounset
 
-sudo apt install -y devscripts debhelper distro-info-data distro-info dh-exec cargo libseccomp-dev
+sudo apt-get update && sudo apt-get install -y devscripts debhelper distro-info-data distro-info dh-exec cargo libseccomp-dev
 
 assert_non_empty() {
     name=$1
