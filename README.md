@@ -1,6 +1,6 @@
 # task-maker-rust-ppa
 
-Scripts to check for new [task-maker-rust](https://github.com/edomora97/task-maker-rust) releases, and build and publish the packages to [ppa:dariop1/task-maker-rust](https://launchpad.net/~dariop1/+archive/ubuntu/task-maker-rust)
+Scripts to check for new [task-maker-rust](https://github.com/olimpiadi-informatica/task-maker-rust) releases, and build and publish the packages to [ppa:dariop1/task-maker-rust](https://launchpad.net/~dariop1/+archive/ubuntu/task-maker-rust)
 
 # Installation
 

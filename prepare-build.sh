@@ -17,8 +17,8 @@ cd build
 #  - the debian/ folder inside the source repo
 #  - the packaged dependencies
 
-git clone --depth 1 --branch v$TAG https://github.com/edomora97/task-maker-rust
-wget https://github.com/edomora97/task-maker-rust/archive/refs/tags/v$TAG.tar.gz -O task-maker-rust_$TAG.orig.tar.gz
+git clone --depth 1 --branch v$TAG https://github.com/olimpiadi-informatica/task-maker-rust
+wget https://github.com/olimpiadi-informatica/task-maker-rust/archive/refs/tags/v$TAG.tar.gz -O task-maker-rust_$TAG.orig.tar.gz
 cd task-maker-rust
 cp -r ../../debian .
 

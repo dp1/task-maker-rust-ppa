@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: task-maker-rust
-Source: https://github.com/edomora97/task-maker-rust
+Source: https://github.com/olimpiadi-informatica/task-maker-rust
 
 Files: *
 Copyright: 2022 Edoardo Morassutto <edoardo.morassutto@gmail.com>
