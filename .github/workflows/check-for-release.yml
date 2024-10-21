@@ -15,7 +15,7 @@ jobs:
         id: getrelease
         uses: pozetroninc/github-action-get-latest-release@v0.8.0
         with:
-          repository: edomora97/task-maker-rust
+          repository: olimpiadi-informatica/task-maker-rust
           excludes: prerelease, draft
 
       - name: Check if the version is new
@@ -37,7 +37,7 @@ jobs:
           body: |
             Update task-maker-rust to ${{ steps.getrelease.outputs.release }}.
 
-            See https://github.com/edomora97/task-maker-rust/releases/tag/${{ steps.getrelease.outputs.release }}
+            See https://github.com/olimpiadi-informatica/task-maker-rust/releases/tag/${{ steps.getrelease.outputs.release }}
 
             Merge this PR to build & publish the new version
           labels: new-release
