@@ -40,7 +40,7 @@ for s in $SERIES; do
 
     sed -re "s/#VERSION_NAME/$s/" -re "s/#VERSION_NUM/$version/" $tmpfile >debian/changelog
 
-    debuild -S -sa \
+    debuild -S -d -sa \
         -k"$GPG_KEY_ID" \
         -p"gpg --batch --passphrase "$GPG_PASSPHRASE" --pinentry-mode loopback"
 

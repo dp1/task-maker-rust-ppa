@@ -4,6 +4,8 @@ on:
     types:
       - closed
   workflow_dispatch:
+env:
+  CARGO_TERM_COLOR: always
 jobs:
   publish:
     if: >
