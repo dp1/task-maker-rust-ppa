@@ -14,4 +14,4 @@ data/* usr/share/task-maker-rust/
 tools/vim/ftdetect/cases_gen.vim usr/share/vim/vimfiles/ftdetect/
 tools/vim/syntax/cases_gen.vim usr/share/vim/vimfiles/syntax/
 
-tools/ubuntu/apparmor-task-maker-rust etc/apparmor.d/task-maker-rust
+tools/ubuntu/apparmor-task-maker-rust => etc/apparmor.d/task-maker-rust
