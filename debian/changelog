@@ -1,3 +1,9 @@
+task-maker-rust (0.7.5-1~ubuntu#VERSION_NUM) #VERSION_NAME; urgency=medium
+
+  * Update to version 0.7.5
+
+ -- Dario Petrillo <dario.pk1@gmail.com>  Sat, 26 Sep 2026 09:23:08 +0000
+
 task-maker-rust (0.6.9-1~ubuntu#VERSION_NUM) #VERSION_NAME; urgency=medium
 
   * Update to version 0.6.9
